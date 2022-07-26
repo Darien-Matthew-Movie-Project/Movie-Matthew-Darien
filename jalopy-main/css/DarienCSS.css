@@ -1,0 +1,29 @@
+body {
+    margin: 0
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px;
+    background: black;
+}
+
+#logo {
+    color: #d30000;
+    font-size: x-large;
+    font-weight: bold;
+    margin-right: 900px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 2px;
+}
+
+a:hover {
+    background: #3b3b3b;
+    border-radius: 10px;
+}
