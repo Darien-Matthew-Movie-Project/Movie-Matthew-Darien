@@ -61,14 +61,23 @@ export default function router(URI) {
         },
         '/searchMovies': {
             returnView: SearchMovie,
-            state: {},
+            state: {
+
+            },
             uri: '/searchMovies',
             title: 'Search Movie',
             viewEvent: SearchMovieEvents
         },
         '/editMovie': {
             returnView: EditMovie,
-            state: {},
+            state: {
+                movie: {
+                    url: 'https://flashy-adhesive-cupcake.glitch.me/movies',
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }
+            },
             uri: '/editMovie',
             title: 'Edit Movie',
             viewEvent: EditMovieEvents
