@@ -7,8 +7,8 @@ import Register from "./views/Register.js"
 import {RegisterEvent} from "./views/Register.js";
 import UserIndex, {UserEvents} from "./views/User.js";
 import Logout, {LogoutEvents} from "./views/Logout.js";
-import SearchMovie, {SearchMovieEvents} from "./views/SearchMovies.js";
-import EditMovie, {EditMovieEvents} from "./views/EditMovie.js";
+import SearchMovies, {SearchMoviesEvents} from "./views/SearchMovies.js";
+import EditMovie, {EditMoviesEvents} from "./views/EditMovie.js";
 
 /**
  * Returns the route object for a specific route based on the given URI
@@ -60,7 +60,7 @@ export default function router(URI) {
             viewEvent: UserEvents
         },
         '/searchMovies': {
-            returnView: SearchMovie,
+            returnView: SearchMovies,
             state: {
                 movie: {
                     url: 'https://flashy-adhesive-cupcake.glitch.me/movies',
@@ -71,14 +71,14 @@ export default function router(URI) {
             },
             uri: '/searchMovies',
             title: 'Search Movies',
-            viewEvent: SearchMovieEvents
+            viewEvent: SearchMoviesEvents
         },
         '/editMovie': {
             returnView: EditMovie,
             state: {},
             uri: '/editMovie',
             title: 'Edit Movie',
-            viewEvent: EditMovieEvents
+            viewEvent: EditMoviesEvents
         },
         '/error': {
             returnView: Error404,
