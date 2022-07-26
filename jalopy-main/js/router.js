@@ -1,5 +1,4 @@
 import Home, {HomeEvents} from "./views/Home.js";
-import AddMovie, {AddMovieEvents} from "./views/AddMovie.js";
 import Error404 from "./views/Error404.js";
 import Loading from "./views/Loading.js";
 import Login from "./views/Login.js";
@@ -8,7 +7,7 @@ import Register from "./views/Register.js"
 import {RegisterEvent} from "./views/Register.js";
 import UserIndex, {UserEvents} from "./views/User.js";
 import Logout, {LogoutEvents} from "./views/Logout.js";
-import RemoveMovie, {RemoveMovieEvents} from "./views/RemoveMovie.js";
+import SearchMovie, {SearchMovieEvents} from "./views/SearchMovie.js";
 import EditMovie, {EditMovieEvents} from "./views/EditMovie.js";
 
 /**
@@ -60,19 +59,12 @@ export default function router(URI) {
             title: 'User Info',
             viewEvent: UserEvents
         },
-        '/addMovie': {
-            returnView: AddMovie,
+        '/searchMovies': {
+            returnView: SearchMovie,
             state: {},
-            uri: '/addMovie',
-            title: 'Add Movie',
-            viewEvent: AddMovieEvents
-        },
-        '/removeMovie': {
-            returnView: RemoveMovie,
-            state: {},
-            uri: '/removeMovie',
-            title: 'Remove Movie',
-            viewEvent: RemoveMovieEvents
+            uri: '/searchMovies',
+            title: 'Search Movie',
+            viewEvent: SearchMovieEvents
         },
         '/editMovie': {
             returnView: EditMovie,
