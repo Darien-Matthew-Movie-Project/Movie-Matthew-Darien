@@ -67,7 +67,7 @@ export default function router(URI) {
                     headers: {
                         'Accept': 'application/json'
                     }
-                }
+                },
             },
             uri: '/searchMovies',
             title: 'Search Movies',

@@ -29,6 +29,10 @@ a:hover {
     border-radius: 10px;
 }
 
+#magnifying {
+    padding: 4px;
+}
+
 #formContainer {
     margin: 20px 0;
     text-align: center;
