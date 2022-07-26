@@ -29,7 +29,40 @@ a:hover {
     border-radius: 10px;
 }
 
-label {
+#magnifying {
+    padding: 4px;
+}
+
+#formContainer {
+    margin: 20px 0;
+    text-align: center;
+    height: 300px;
+    background-image: url("../assets/searchParty.png");
+    background-position: center;
+    border: white 1px solid;
+}
+
+#formInnerContainer {
+    margin-top: 80px;
+}
+
+#searchForm {
+    margin-top: 80px;
+    margin-left: 500px;
+    width: 20%;
+    padding: 20px;
+    background: darkred;
+    border-radius: 10px;
+    border: 1px solid black;
+    opacity: 90%;
+}
+
+#searchLabel {
     color: white;
+    font-size: x-large;
+}
+
+#searchInput {
+    margin-bottom: 10px;
 }
 
