@@ -12,5 +12,4 @@ export default function EditMovie(props) {
     `;
 }
 export function EditMovieEvents() {
-    showNotification("Hey, a message!", "danger");
 }

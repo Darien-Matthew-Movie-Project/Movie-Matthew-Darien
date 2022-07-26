@@ -7,7 +7,7 @@ import Register from "./views/Register.js"
 import {RegisterEvent} from "./views/Register.js";
 import UserIndex, {UserEvents} from "./views/User.js";
 import Logout, {LogoutEvents} from "./views/Logout.js";
-import SearchMovie, {SearchMovieEvents} from "./views/SearchMovie.js";
+import SearchMovie, {SearchMovieEvents} from "./views/SearchMovies.js";
 import EditMovie, {EditMovieEvents} from "./views/EditMovie.js";
 
 /**
@@ -62,15 +62,6 @@ export default function router(URI) {
         '/searchMovies': {
             returnView: SearchMovie,
             state: {
-
-            },
-            uri: '/searchMovies',
-            title: 'Search Movie',
-            viewEvent: SearchMovieEvents
-        },
-        '/editMovie': {
-            returnView: EditMovie,
-            state: {
                 movie: {
                     url: 'https://flashy-adhesive-cupcake.glitch.me/movies',
                     headers: {
@@ -78,6 +69,13 @@ export default function router(URI) {
                     }
                 }
             },
+            uri: '/searchMovies',
+            title: 'Search Movies',
+            viewEvent: SearchMovieEvents
+        },
+        '/editMovie': {
+            returnView: EditMovie,
+            state: {},
             uri: '/editMovie',
             title: 'Edit Movie',
             viewEvent: EditMovieEvents
