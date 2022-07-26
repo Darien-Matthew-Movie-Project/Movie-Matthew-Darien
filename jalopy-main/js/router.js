@@ -1,5 +1,5 @@
 import Home, {HomeEvents} from "./views/Home.js";
-import About, {AboutEvents} from "./views/About.js";
+import AddMovie, {AddMovieEvents} from "./views/AddMovie.js";
 import Error404 from "./views/Error404.js";
 import Loading from "./views/Loading.js";
 import Login from "./views/Login.js";
@@ -8,6 +8,8 @@ import Register from "./views/Register.js"
 import {RegisterEvent} from "./views/Register.js";
 import UserIndex, {UserEvents} from "./views/User.js";
 import Logout, {LogoutEvents} from "./views/Logout.js";
+import RemoveMovie, {RemoveMovieEvents} from "./views/RemoveMovie.js";
+import EditMovie, {EditMovieEvents} from "./views/EditMovie.js";
 
 /**
  * Returns the route object for a specific route based on the given URI
@@ -18,7 +20,14 @@ export default function router(URI) {
     const routes = {
         '/': {
             returnView: Home,
-            state: {},
+            state: {
+                movie: {
+                    url: 'https://flashy-adhesive-cupcake.glitch.me/movies',
+                    headers: {
+                    'Accept': 'application/json'
+                    }
+                }
+            },
             uri: '/',
             title: 'Home',
             viewEvent: HomeEvents
@@ -51,12 +60,26 @@ export default function router(URI) {
             title: 'User Info',
             viewEvent: UserEvents
         },
-        '/about': {
-            returnView: About,
+        '/addMovie': {
+            returnView: AddMovie,
             state: {},
-            uri: '/about',
-            title: 'About',
-            viewEvent: AboutEvents
+            uri: '/addMovie',
+            title: 'Add Movie',
+            viewEvent: AddMovieEvents
+        },
+        '/removeMovie': {
+            returnView: RemoveMovie,
+            state: {},
+            uri: '/removeMovie',
+            title: 'Remove Movie',
+            viewEvent: RemoveMovieEvents
+        },
+        '/edit': {
+            returnView: EditMovie,
+            state: {},
+            uri: '/editMovie',
+            title: 'Edit Movie',
+            viewEvent: EditMovieEvents
         },
         '/error': {
             returnView: Error404,

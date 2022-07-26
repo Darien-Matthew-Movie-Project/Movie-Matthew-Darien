@@ -1,18 +1,18 @@
 import {showNotification} from "../messaging.js";
 
-export default function About(props) {
+export default function EditMovie(props) {
     // language=HTML
     return `
 <header>
-    <h1>About Page</h1>
+    <h1>Edit Movie</h1>
 </header>
 <main>
     <div>
-        <p>About page is here.</p>  
+        
     </div>
 </main>
     `;
 }
-export function AboutEvents() {
+export function EditMovieEvents() {
     showNotification("Hey, a message!", "danger");
 }
