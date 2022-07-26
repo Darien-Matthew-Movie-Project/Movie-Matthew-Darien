@@ -13,6 +13,7 @@ export default function Home(props) {
 function topHTML() {
     return `
     <div class="container">
+    <div class="billboard">
     `;
 }
 
@@ -24,11 +25,14 @@ function makeMovieIntoCards() {
             <div class="card-header">${info[i].title}</div>
             <div class="card-body">
             <a id="icons"><i class="far fa-play-circle"></i></a>
-            <a id="icons"><i class="fal fa-plus-circle"></i></a>
-            <a id="icons"><i class="fal fa-heart-circle"></i></a>
-            <a id="icons"><i class="fal fa-dragon"></i></a>
+            <a id="icons"><i class="fas fa-plus-circle"></i></a>
+            <a id="icons"><i class="far fa-thumbs-up"></i></a>
+            <a id="icons"><i class="fas fa-hat-cowboy-side"></i></a>
             </div>
-            <div class="card-footer"></div>
+            <div>Rotten Tomatoes Rating :${info[i].rating}</div>
+            <div class="card-footer">
+            </div>
+            
         </div>
         `;
     }
