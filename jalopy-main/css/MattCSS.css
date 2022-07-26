@@ -15,3 +15,13 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+.billboard {
+    width: auto;
+    height: 600px;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+}
