@@ -3,15 +3,12 @@ import createView from "../createView.js";
 const BASE_URI = `${BACKEND_HOST}/api/users`;
 
 export default function UserIndex(props) {
-    console.log(props);
     // language=HTML
     return `
         <header>
             <h1>Your Page</h1>
         </header>
         <main>
-            <img src="${props.users.photourl}">
-
             <form id="register-form">
                 <label for="username">Username</label>
                 <input disabled id="username" name="username" value="${props.users.username}" type="text"/><br>

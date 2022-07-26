@@ -1,5 +1,3 @@
-import {showNotification} from "../messaging.js";
-
 export default function RemoveMovie(props) {
     // language=HTML
     return `

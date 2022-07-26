@@ -1,5 +1,4 @@
 import Navbar from "./views/partials/Navbar.js";
-import {getNotificationElement} from "./messaging.js";
 
 /**
  * Pushes the current URI to the URL bar and sets the HTML of the app div.
@@ -12,7 +11,6 @@ export default function render(props, route) {
     document.title = title;
     //language=html
     app.innerHTML = `${Navbar(null)}
-        ${getNotificationElement()} 
         ${route.returnView(props)}`;
     if (route.viewEvent){
         route.viewEvent();

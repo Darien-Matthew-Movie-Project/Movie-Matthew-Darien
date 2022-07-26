@@ -1,5 +1,3 @@
-import {showNotification} from "../messaging.js";
-
 export default function EditMovie(props) {
     // language=HTML
     return `
