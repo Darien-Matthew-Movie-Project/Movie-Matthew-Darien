@@ -67,6 +67,12 @@ export default function router(URI) {
                     headers: {
                         'Accept': 'application/json'
                     }
+                },
+                posters: {
+                    url: 'http://img.ombdapi.com/?apikey=MOVIE_POSTERS&',
+                    headers: {
+                        'Accept': 'application/json'
+                    }
                 }
             },
             uri: '/searchMovies',

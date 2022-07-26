@@ -12,8 +12,10 @@ export default function Home(props) {
 
 function topHTML() {
     return `
+    <div class="img-container">
+    <img class="billboard" src="assets/step-brothers.jpeg">
+    </div>
     <div class="container">
-    <div class="billboard">
     `;
 }
 
