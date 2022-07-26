@@ -13,7 +13,7 @@ export default function Navbar(props) {
 
     html = html + `<a class="jalopy-nav" href="/removeMovie" data-link>Remove Movie</a>`;
 
-    html = html + `<a class="jalopy-nav" href="/edit" data-link>Edit Movie Info</a>`;
+    html = html + `<a class="jalopy-nav" href="/editMovie" data-link>Edit Movie Info</a>`;
 
     // only logged in can see user info and logout
     if(loggedIn) {

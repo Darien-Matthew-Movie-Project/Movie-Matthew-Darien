@@ -74,7 +74,7 @@ export default function router(URI) {
             title: 'Remove Movie',
             viewEvent: RemoveMovieEvents
         },
-        '/edit': {
+        '/editMovie': {
             returnView: EditMovie,
             state: {},
             uri: '/editMovie',
