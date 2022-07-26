@@ -1,4 +1,4 @@
-export default function EditMovie(props) {
+export default function EditMovies(props) {
     // language=HTML
     return `
 <header>
@@ -11,5 +11,5 @@ export default function EditMovie(props) {
 </main>
     `;
 }
-export function EditMovieEvents() {
+export function EditMoviesEvents() {
 }

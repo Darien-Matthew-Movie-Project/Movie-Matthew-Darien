@@ -1,4 +1,6 @@
 export default function SearchMovies(props) {
+    console.log(props);
+
     // language=HTML
     return `
     <body>
@@ -6,11 +8,17 @@ export default function SearchMovies(props) {
         
     </header>
     <main>
-        <div>
-            <form>
-                <label>Search and you will find ...</label>
-                <input type="text">
-            </form>
+        <div id="formContainer">
+            <div id="searchForm">
+				<form>
+					<label for="searchInput" id="searchLabel">Search and you will find ...</label>
+					<input type="text" id="searchInput" placeholder="Search for a movie!">
+				</form>
+            </div>
+        </div>
+        
+        <div id="moviesContainer">
+            
         </div>
     </main>
     </body>
@@ -19,5 +27,5 @@ export default function SearchMovies(props) {
 
 
 
-export function SearchMovieEvents() {
+export function SearchMoviesEvents() {
 }
