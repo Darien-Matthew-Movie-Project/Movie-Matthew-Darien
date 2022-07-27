@@ -13,6 +13,7 @@ export default function SearchMovies(props) {
 				<form>
 					<label for="searchInput" id="searchLabel">Search and you will find ...</label>
 					<input type="text" id="searchInput" placeholder="Search for a movie!">
+                    <button id="submit">Submit</button>
 				</form>
             </div>
         </div>
@@ -25,7 +26,16 @@ export default function SearchMovies(props) {
     `;
 }
 
+function search() {
+    let userInput = document.querySelector('#searchInput');
+    let btn = document.querySelector('#submit');
 
+    btn.addEventListener('click', function (event){
+
+    })
+
+}
 
 export function SearchMoviesEvents() {
+    search();
 }

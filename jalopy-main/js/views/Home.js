@@ -2,6 +2,9 @@ const BASE_URI = `${BACKEND_HOST}/api/s3/download`;
 
 let info
 export default function Home(props) {
+
+    console.log(props);
+
     info = props.movie
     let html = topHTML();
     html += makeMovieIntoCards();

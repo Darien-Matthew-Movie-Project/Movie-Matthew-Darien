@@ -68,6 +68,12 @@ export default function router(URI) {
                         'Accept': 'application/json'
                     }
                 },
+                // movieSearch: {
+                //     url: 'https://api.themoviedb.org/3/search/company?api_key=d5240794730792783c25529b03fad501&page=1',
+                //     headers: {
+                //         'Accept': 'application/json'
+                //     }
+                // },
             },
             uri: '/searchMovies',
             title: 'Search Movies',
@@ -101,3 +107,4 @@ export default function router(URI) {
 
     return routes[URI];
 }
+
