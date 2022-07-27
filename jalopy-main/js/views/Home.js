@@ -14,7 +14,6 @@ export default function Home(props) {
 }
 
 function makeCards(props) {
-    let totalMovies = (props.glitchMovies.length + props.TmbdMovies.results.length);
     let htmlString = '';
 
     console.log(props.TmbdMovies.results[0].poster_path);
@@ -30,10 +29,16 @@ function makeCards(props) {
                                          <p class="movieDetails"></p>
                                        </div>   
                                        <div class="flip-card-back">
-                                         <p>${props.TmbdMovies.results[i].overview}</p>
+                                         <p class="backOverview">${props.TmbdMovies.results[i].overview}</p>
+                                         <div>
+                                         <a href=""><i class="fa-solid fa-circle-play"></i></a>
+                                         <a href=""><i class="fa-solid fa-circle-plus"></i></a>
+                                         <a href=""><i class="fa-solid fa-heart"></i></a>
+                                        </div>
                                        </div>
                                     </div>         
-                                 </div>`
+                                 </div>
+                                 <hr>`
     }
 
     return htmlString;

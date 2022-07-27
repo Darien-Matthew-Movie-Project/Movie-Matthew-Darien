@@ -93,9 +93,10 @@ a:hover {
     background-color: transparent;
     width: 300px;
     height: 450px;
-    border: 1px solid #f1f1f1;
+    border: 1px solid fuchsia;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 /* This container is needed to position the front and back side */
@@ -131,7 +132,7 @@ a:hover {
 
 /* Style the back side */
 .flip-card-back {
-    background-color: darkmagenta;
+    background-color: #3b3b3b;
     color: white;
     transform: rotateY(180deg);
     border-radius: 10px;
@@ -157,7 +158,15 @@ a:hover {
 
 #homeContainer {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
+}
+
+hr {
+    height: 50%;
+}
+
+.backOverview {
+    margin: 20px 10px;
 }
 
