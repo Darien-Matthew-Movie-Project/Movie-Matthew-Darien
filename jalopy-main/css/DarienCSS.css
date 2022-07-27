@@ -92,7 +92,7 @@ a:hover {
 .flip-card {
     background-color: transparent;
     width: 300px;
-    height: 300px;
+    height: 450px;
     border: 1px solid #f1f1f1;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
     border-radius: 10px;
@@ -146,5 +146,18 @@ a:hover {
 #loading {
     color: white;
     font-weight: bold;
+}
+
+#homeViewH1 {
+    margin-top: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+#homeContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 

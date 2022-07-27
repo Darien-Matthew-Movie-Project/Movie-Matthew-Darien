@@ -67,11 +67,11 @@ async function renderSearch() {
     container.innerHTML = `<div class="flip-card">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front">
-                                        <img id="movieTemplate" src="https://image.tmdb.org/t/p/w300${movie_poster.results[0].backdrop_path}" alt="movie picture">
-                                        <p class="movieDetails">${movie_data.Title}</p>
-                                        <p class="movieDetails">${movie_data.Rated}, ${movie_data.Genre}, ${movie_data.imdbRating}</p>
+                                        <img id="movieTemplate" src="https://image.tmdb.org/t/p/w300${movie_poster.results[0].poster_path}" alt="movie picture">
                                     </div>   
                                     <div class="flip-card-back">
+                                        <p class="movieDetails">${movie_data.Title}</p>
+                                        <p class="movieDetails">${movie_data.Rated}, ${movie_data.Genre}, ${movie_data.imdbRating}</p>
                                         <p>${movie_poster.results[0].overview}</p>
                                     </div>
                                 </div>         

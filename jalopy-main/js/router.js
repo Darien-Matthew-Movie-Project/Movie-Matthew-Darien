@@ -14,10 +14,16 @@ export default function router(URI) {
         '/': {
             returnView: Home,
             state: {
-                movie: {
+                glitchMovies: {
                     url: 'https://merciful-clear-regnosaurus.glitch.me/movies',
                     headers: {
                     'Accept': 'application/json'
+                    }
+                },
+                TmbdMovies: {
+                    url: `https://api.themoviedb.org/3/trending/all/day?api_key=${POSTER_API}`,
+                    headers: {
+                        'Accept': 'application/json'
                     }
                 }
             },

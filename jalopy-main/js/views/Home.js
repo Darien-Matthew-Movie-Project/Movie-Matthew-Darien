@@ -1,71 +1,43 @@
 const BASE_URI = `${BACKEND_HOST}/api/s3/download`;
 
-let info
+
 export default function Home(props) {
 
-    console.log(props);
-
-    info = props.movie
-    let html = topHTML();
-    html += makeMovieIntoCards();
-    html += bottomHTML();
-
-    return html;
-}
-
-function topHTML() {
     return `
-    <div class="img-container">
-    </div>
-    <div class="card-container">
+        <body>
+            <h1 id="homeViewH1">Greatest movies EVER! At the tip of your hands.</h1>
+            <div id="homeContainer">
+                ${makeCards(props)}
+            </div>
+        </body>
     `;
 }
 
-function makeMovieIntoCards() {
-    let html = "";
-    for (let i = 0; i < info.length; i++) {
-        html += `
-    <div class="flip-card">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <img class="card-image" src="assets/step-brothers.jpeg">
-            </div>
-            <div class="flip-card-back">                
-                <div class="card-header">
-                    <h1 class="card-title">${info[i].title}</h1>
-                </div>
-                <div class="card-body">
-                    <a id="icons"><i class="far fa-play-circle"></i></a>
-                    <a id="icons"><i class="fas fa-plus-circle"></i></a>
-                    <a id="icons"><i class="far fa-thumbs-up"></i></a>
-                    <a id="icons"><i class="fas fa-hat-cowboy-side"></i></a>
-                    <div>Rotten Tomatoes Rating :${info[i].rating}</div>
-                    <div>Genre: ${info[i].genre}</div>
-                    <div>Director: ${info[i].director}</div>
-                </div>
-                <div class="card-footer">
-                <p>${info[i].plot}</p>
-                </div>
-            </div>
-        </div>
-    </div>
-        `;
-    }
-    return html;
-}
+function makeCards(props) {
+    let totalMovies = (props.glitchMovies.length + props.TmbdMovies.results.length);
+    let htmlString = '';
 
-function bottomHTML() {
-    return`
-    </div>
-`;
+    console.log(props.TmbdMovies.results[0].poster_path);
+
+
+    for (let i = 0; i < props.TmbdMovies.results.length; i++) {
+
+        htmlString  += `<div class="flip-card">
+                                    <div class="flip-card-inner">
+                                       <div class="flip-card-front">
+                                         <img id="movieTemplate" src="https://image.tmdb.org/t/p/w300${props.TmbdMovies.results[i].poster_path}" alt="movie picture">
+                                         <p class="movieDetails">${props.TmbdMovies.results[i].original_title}</p>
+                                         <p class="movieDetails"></p>
+                                       </div>   
+                                       <div class="flip-card-back">
+                                         <p>${props.TmbdMovies.results[i].overview}</p>
+                                       </div>
+                                    </div>         
+                                 </div>`
+    }
+
+    return htmlString;
 }
 
 export function HomeEvents() {
-    console.log(info);
 }
-// const cards = document.querySelectorAll(".cards-single");
-//
-// function flipCard() {
-//     this.classList.toggle("cards-single.flip");
-// }
-// cards.forEach((card) => card.addEventListener("click", flipCard));
