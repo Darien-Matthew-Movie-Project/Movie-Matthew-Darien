@@ -21,7 +21,7 @@ export default function router(URI) {
             returnView: Home,
             state: {
                 movie: {
-                    url: 'https://flashy-adhesive-cupcake.glitch.me/movies',
+                    url: 'https://merciful-clear-regnosaurus.glitch.me/movies',
                     headers: {
                     'Accept': 'application/json'
                     }
