@@ -1,12 +1,6 @@
 import Home, {HomeEvents} from "./views/Home.js";
 import Error404 from "./views/Error404.js";
 import Loading from "./views/Loading.js";
-import Login from "./views/Login.js";
-import LoginEvent from "./auth.js";
-import Register from "./views/Register.js"
-import {RegisterEvent} from "./views/Register.js";
-import UserIndex, {UserEvents} from "./views/User.js";
-import Logout, {LogoutEvents} from "./views/Logout.js";
 import SearchMovies, {SearchMoviesEvents} from "./views/SearchMovies.js";
 import EditMovie, {EditMoviesEvents} from "./views/EditMovie.js";
 
@@ -30,34 +24,6 @@ export default function router(URI) {
             uri: '/',
             title: 'Home',
             viewEvent: HomeEvents
-        },
-        '/logout': {
-            returnView: Logout,
-            state: {},
-            uri: '/',
-            title: 'Logout',
-            viewEvent: LogoutEvents
-        },
-        '/login': {
-            returnView: Login,
-            state: {},
-            uri: '/login',
-            title: "Login",
-            viewEvent: LoginEvent
-        },
-        '/register': {
-            returnView: Register,
-            state: {},
-            uri: '/register',
-            title: 'Register',
-            viewEvent: RegisterEvent
-        },
-        '/users': {
-            returnView: UserIndex,
-            state: {},
-            uri: "/users",
-            title: 'User Info',
-            viewEvent: UserEvents
         },
         '/searchMovies': {
             returnView: SearchMovies,

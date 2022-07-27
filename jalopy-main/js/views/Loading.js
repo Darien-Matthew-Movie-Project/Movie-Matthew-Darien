@@ -1,3 +1,6 @@
 export default function Loading(props) {
-    return `<h1>Loading...</h1>`;
+    return `<div id="loadingView">
+                  <h1 id="loading">Loading...</h1>
+            </div>
+`;
 }

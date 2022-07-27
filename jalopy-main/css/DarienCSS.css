@@ -15,13 +15,21 @@ nav {
     color: #d30000;
     font-size: x-large;
     font-weight: bold;
-    margin-right: 900px;
+    margin-right: 1050px;
+}
+
+#logoDiv {
+    background: goldenrod;
+    border-radius: 10px;
+    border: 1px solid white;
 }
 
 a {
     text-decoration: none;
     color: white;
     padding: 2px;
+    display: flex;
+    justify-content: center;
 }
 
 a:hover {
@@ -127,5 +135,16 @@ a:hover {
     color: white;
     transform: rotateY(180deg);
     border-radius: 10px;
+}
+
+#loadingDiv {
+    display: flex;
+    justify-content: center;
+    height: 600px;
+}
+
+#loading {
+    color: white;
+    font-weight: bold;
 }
 
