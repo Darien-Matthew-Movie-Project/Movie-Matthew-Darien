@@ -61,20 +61,7 @@ export default function router(URI) {
         },
         '/searchMovies': {
             returnView: SearchMovies,
-            state: {
-                movie: {
-                    url: 'https://flashy-adhesive-cupcake.glitch.me/movies',
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                },
-                // movieSearch: {
-                //     url: 'https://api.themoviedb.org/3/search/company?api_key=d5240794730792783c25529b03fad501&page=1',
-                //     headers: {
-                //         'Accept': 'application/json'
-                //     }
-                // },
-            },
+            state: {},
             uri: '/searchMovies',
             title: 'Search Movies',
             viewEvent: SearchMoviesEvents
