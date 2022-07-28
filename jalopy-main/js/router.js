@@ -40,7 +40,14 @@ export default function router(URI) {
         },
         '/editMovie': {
             returnView: EditMovie,
-            state: {},
+            state: {
+                glitchMovies: {
+                    url: 'https://merciful-clear-regnosaurus.glitch.me/movies',
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }
+            },
             uri: '/editMovie',
             title: 'Edit Movie',
             viewEvent: EditMoviesEvents

@@ -170,3 +170,10 @@ hr {
     margin: 20px 10px;
 }
 
+#titleLabel {
+    color: white;
+}
+
+#genreLabel {
+    color: white;
+}
