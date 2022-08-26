@@ -3,7 +3,7 @@ export default function Navbar(props) {
     // everyone can see home
     let html = `
         <nav>
-            <div id="logoDiv" class="link"><a href="/" data-link id="logo">Cult-Flix</a></div>`;
+            <div id="logoDiv" class="link"><a href="/" data-link id="logo">Pioneer Movies</a></div>`;
 
     html = html + `<div class="link"><a href="/editMovie" data-link>Edit Movie Info</a></div>`;
 
